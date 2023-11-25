@@ -1,17 +1,10 @@
-.card-event {
+.event-card {
     box-sizing: border-box;
 
     &__picture {
         position: relative;
         display: block;
         margin-bottom: 25px;
-    }
-
-    &__picture::before {
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 107.160%;
     }
 
     &__picture-img {
@@ -43,7 +36,7 @@
         height: 100%;
     }
 
-    &__link:hover .card-event__title {
+    &__link:hover &__title {
         color: @red_dark;
         text-decoration-color: @red_dark;
     }
