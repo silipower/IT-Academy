@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
-	@@include('blocks/head.html')
+<html>
 
-	<body class="body">
+  @@include('blocks/head.html')
+
+  <body>
+    
     @@include('blocks/page-header.html')
 
     <main class="main">
-        <div class="events">
-            <div class="events__container">
-              <h2 class="events__title title">Мероприятия</h2>
-              <div class="events__list listing">
-                @@loop('blocks/event-card.html', [
+      <div class="home">
+        <div class="events__container">
+          <section class="listing events__listing">
+            <h2 class="listing__section-title section-title">Мероприятия</h2>
+
+            <div class="listing__events-list">
+              <!-- prettier-ignore -->
+              @@loop('blocks/event-card.html', [
                 {
                   "class": "event-card listing__event-card",
                   "img": "../assets/images/Nirvana.png",
@@ -66,11 +71,12 @@
                   "datetime": "2022-12-27t10:00"
                 }
               ])
-              </div>
             </div>
+          </section>
         </div>
+      </div>
     </main>
-    
+
     @@include('blocks/page-footer.html')
-	</body>
+  </body>
 </html>

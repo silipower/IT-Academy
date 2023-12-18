@@ -1,59 +1,77 @@
-.event-card {
-    box-sizing: border-box;
+.event-card
+{
+  box-sizing: border-box;
 
-    &__picture {
-        position: relative;
-        display: block;
-        margin-bottom: 25px;
-    }
+  &__link
+  {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-    &__picture-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  &__link:hover &__title
+  {
+    color: @red_dark;
+    text-decoration-color: @red_dark;
+  }
 
-    &__title {
-        min-height: 64px;
-        margin: 0;
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        font-family: "Open Sans";
-        font-size: 24px;
-        font-weight: 700;
-        line-height: normal;
-        color: @black;
-        transition: color 0.2s, text-decoration-color 0.2s;
-    }
+  &__picture
+  {
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
+  }
 
-    &__link {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
+  &__picture::before
+  {
+    // content: '';
+    // display: block;
+    // width: 100%;
+    // padding-top: 107.16%;
+  }
 
-    &__link:hover &__title {
-        color: @red_dark;
-        text-decoration-color: @red_dark;
-    }
+  &__picture-img
+  {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    &__text {
-        margin: 15px 0;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: normal;
-        color: @black;
-    }
+  &__title
+  {
+    margin: 0 0 auto;
+    min-height: 64px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    color: #1F1E1E;
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: color 0.2s, text-decoration-color 0.2s;
+  }
 
-    &__time {
-        color: @black;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        margin-top: auto;
-    }
+  &__text
+  {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: #1e1e1e;
+  }
+
+  &__time
+  {
+    margin-top: auto;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    color: #1e1e1e;
+  }
 }

@@ -1,52 +1,95 @@
-html,body {
-    width: 100%; 
-    margin: 0;
-    padding: 0;
-}
-  
-body {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: @gray;
-    background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
-    background-position: 0 0, 0 0;
-    background-size: auto, 100% auto;
-    background-repeat: repeat, repeat-y;
-    color: @black;
-    font-family: @font1;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.375;
-    overflow-x: hidden;
-    padding-top: 147px;
-}
-  
-.main {
-    flex: 1 0 auto;
-}
-  
-.page-footer {
-    flex: 0 0 auto;
-}
-  
-a {
-    color: @black;
-    outline: none;
-}
-  
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+*::-webkit-scrollbar
+{
+  width: 10px;
 }
 
-button {
+*::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.08);
+}
+
+*::-webkit-scrollbar-thumb
+{
+  background-color: #1F1E1E;
+  border-radius: 20px;
+}
+
+html, body
+{
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body
+{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: @gray;
+  background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
+  background-position: 0 0, 0 0;
+  background-size: auto, 100% auto;
+  background-repeat: repeat, repeat-y;
+  color: @black;
+  font-family: @font1;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.375;
+  overflow-x: hidden;
+  padding-top: 147px;
+}
+
+.main
+{
+  flex: 1 0 auto;
+}
+
+.page-footer
+{
+  flex: 0 0 auto;
+}
+
+a {
+  color: @black;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button
+{
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
+  cursor: pointer;
+}
+
+.btn
+{
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px 40px;
+
+
+  &:active
+  {
+
+  }
+  &:hover
+  {
     box-shadow: none;
     outline: none;
-    color: @black;
+    color: black;
     font-family: @font1;
     cursor: pointer;
+  }
 }
