@@ -41,6 +41,15 @@ body
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+
+  @media @bw1660
+  {
+    padding-top: 111px;
+  }
+  @media @bw768
+  {
+    padding-top: 70px;
+  }
 }
 
 .main
@@ -92,4 +101,62 @@ button
     font-family: @font1;
     cursor: pointer;
   }
+}
+
+input,
+textarea,
+button,
+select
+{
+  box-sizing: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
+}
+
+input,
+textarea
+{
+  &::-webkit-input-placeholder
+  {
+    color: #6c6c6c;
+  }
+  &::-moz-placeholder
+  {
+    color: #6c6c6c;
+  }
+  &:-moz-placeholder
+  {
+    color: #6c6c6c;
+  }
+  &:-ms-input-placeholder
+  {
+    color: #6c6c6c;
+  }
+}
+
+input:focus,
+textarea:focus
+{
+  &::-webkit-input-placeholder
+  {
+    color: transparent;
+  }
+  &::-moz-placeholder
+  {
+    color: transparent;
+  }
+  &:-moz-placeholder
+  {
+    color: transparent;
+  }
+  &:-ms-input-placeholder
+  {
+    color: transparent;
+  }
+}
+
+textarea
+{
+  resize: none;
 }

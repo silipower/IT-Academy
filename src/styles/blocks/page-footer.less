@@ -12,6 +12,7 @@
   {
     display: flex;
     margin-bottom: 60px;
+    
     &::before,
     &::after
     {
@@ -23,14 +24,14 @@
 
     &::before
     {
-      margin-left: 50px;
-      background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00), 82.86%)
+      margin-right: 50px;
+      background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%)
     }
 
     &::after
     {
       margin-left: 50px;
-      background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00), 100%)
+      background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%)
     }
   }
 
@@ -83,4 +84,96 @@
       }
     }
   }
+
+  &__bottom-wrapper
+  {
+    margin-top: 60px;
+    display: grid;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    grid-auto-flow: row;
+    grid-template-columns: 270px 160px auto;
+    grid-template-rows: 64px;
+  }
+
+  &__links
+  {
+    display: flex;
+    align-self: center;
+    column-gap: 44px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  &__link
+  {
+    border: none;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    color: @black;
+    transition: color 0.2s;
+
+    &:hover
+    {
+      @media(hover:hover)
+      {
+        color: @red_dark;
+      }
+    }
+  }
+
+  &__link-icon
+  {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+  }
+
+  &__info
+  {
+    display: grid;
+    flex-direction: row;
+    grid-auto-columns: 263px 61px;
+    column-gap: 60px;
+  }
+
+  &__confidency
+  {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  &__cookies
+  {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  &__copyright
+  {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  &__signature
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 7.5px;
+    margin-top: 50px;
+  }
+
+  &__signature-text
+  {
+    padding: 0;
+  }
+
+  &__signature-icon {}
 }

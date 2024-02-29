@@ -1,64 +1,87 @@
 .offers
 {
   margin-top: 100px;
+  
+  &__container
+  {
+    .container;
+    margin-bottom: 200px;
+  }
 
   &__text
   {
-    margin-bottom: 46px;
+    padding-right: 25px;
+    padding-left: 40px;
     text-align: center;
     font-size: 22px;
+    color: @black;
     font-family: Lora;
-    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.44px;
     text-transform: uppercase;
-    color: @black;
+
+    &--main
+    {
+      margin-top: 100px;
+      margin-bottom: 46px;
+    }
+
+    &--events
+    {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
 
-  &__button
+  &__wrapper
   {
-    display: inline-block;
-    width: auto;
+    display: grid;
+    gap: 0 10%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "hold_event become_tenant";
+  }
+
+  &__hold-event-button,
+  &__become-tenant-button
+  {
+    padding: 15px 40px;
+    display: flex;
+    padding: 15px 40px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    text-align: center;
-    font-family: Open Sans;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  }
 
-    &--1
+  &__hold-event-button
+  {
+    grid-area: hold_event;
+    max-width: 272px;
+    padding: 15px 35px;
+    background-color: @red;
+    color: @white;
+    transition: background-color 0.2s;
+
+    &:active
     {
-      margin-left: 648px;
-      max-width: 272px;
-      padding: 15px 35px;
-      background-color: @red;
-      color: @white;
-      transition: background-color 0.2s;
-
-      &:active
+      background-color: @red_dark;
+    }
+  
+    &:hover
+    {
+      @media (hover: hover)
       {
         background-color: @red_dark;
       }
-    
-      &:hover
-      {
-          @media (hover: hover) {
-              background-color: @red_dark;
-          }
-      }
     }
+  }
 
-    &--2
-    {
-      margin-left: 110px;
-      max-width: 250px;
-      padding: 15px 40px;
-      color: @black;
-    }
+  &__become-tenant-button
+  {
+    grid-area: become_tenant;
   }
 }
