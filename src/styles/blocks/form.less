@@ -9,11 +9,21 @@
     {
       margin-bottom: 50px;
     }
+
+    @media @bw370
+    {
+      display: inline-block;
+    }
   }
 
   &__group
   {
     width: calc(50% - 30px);
+
+    @media @bw370
+    {
+      width: auto;
+    }
   }
 
   &__field
@@ -25,11 +35,26 @@
     &--w50
     {
       width: calc(50% - 30px);
+
+      @media @bw370
+      {
+        width: auto;
+      }
     }
 
     &--mb30
     {
       margin-bottom: 30px;
+    }
+  }
+
+  &__btns
+  {
+    display: flex;
+
+    @media @bw370
+    {
+      display: inline-block;
     }
   }
 
@@ -55,6 +80,29 @@
         background-color: @black;
       }
     }
+
+    &:last-child
+    {
+      margin-bottom: 0;
+    }
+
+    &--w50
+    {
+      width: calc(50% - 30px);
+
+      @media @bw370
+      {
+        width: calc(100% + 80px);
+      }
+    }
+
+    @media @bw370
+      {
+        margin-left: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+      }
   }
 
   &__check

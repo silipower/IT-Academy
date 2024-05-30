@@ -3,6 +3,11 @@
   box-sizing: border-box;
   padding: 60px 0 75px;
 
+  @media @bw370
+  {
+    padding: 60px 0 30px;
+  }
+
   &__container
   {
     .container;
@@ -39,6 +44,11 @@
   {
     display: flex;
     justify-content: space-between;
+
+    @media @bw370
+    {
+      display: inline-block;
+    }
   }
 
   &__nav
@@ -59,6 +69,11 @@
       width: 4px;
       height: 100%;
       background-color: @red;
+    }
+
+    @media @bw370
+    {
+      margin-bottom: 50px;
     }
   }
 
@@ -95,6 +110,11 @@
     grid-auto-flow: row;
     grid-template-columns: 270px 160px auto;
     grid-template-rows: 64px;
+
+    @media @bw370
+    {
+      display: inline-block;
+    }
   }
 
   &__links
@@ -103,7 +123,7 @@
     align-self: center;
     column-gap: 44px;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 50px;
   }
 
   &__link

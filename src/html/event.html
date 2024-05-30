@@ -1,81 +1,101 @@
 <!DOCTYPE html>
-<html lang="ru">
-@@include('blocks/head.html')
+<html>
 
-<body class="body">
-    @@include('blocks/event-page-header.html')
+  @@include('blocks/head.html')
+
+  <body>
+    
+    @@include('blocks/page-header.html')
 
     <main class="main">
-        @@include('blocks/breadcrumbs.html')
-        
-        <article class="event">
-            <div class="event__container">
-                <h2 class="event__title">Вечер | The Best of Sade</h2>
-                <div class="event__wrapper">
-                    <div class="event__info-block event__info-block--left">
-                        <h3 class="event__info-text event__info-text--fs30">16/12/2022</h3>
-                        <h4 class="event__info-text event__info-text--fs17">Кафе «Птичка»</h4>
-                    </div>
-                    <picture class="event__picture">
-                        <img class="event__img" alt="Sade" src="assets/images/Sade.png" />
-                    </picture>
-                    <div class="event__info-block event__info-block--right">
-                        <div class="event__info-time-wrapper">
-                            <h3 class="event__info-text event__info-text--fs30">20.00</h3>
-                            <h4 class="event__info-text event__info-text--fs17">начало</h4>
-                        </div>
-                        <h4 class="event__info-text event__info-text--fs17">Ленина 10 | 2 этаж</h4>
-                    </div>
-                </div>
-                <h3 class="event__sub-title event__program-title">Программа мероприятия:</h3>
-                <div class="event__program-content">
-                    <svg class="event__program-img">
-                        <use xlink:href="assets/icons/symbols.svg#bullets"></use>
-                    </svg>
-                    <p class="event__program-text">
-                        20:15 — Приветствие гостей <br />
-                        20:30 — Первая подача блюд | Салаты <br />
-                        20:40 — Живой вокал | Композиции 1-3 <br />
-                        21:20 — Подача горячих блюд <br />
-                        21:30 — Живой вокал | Композиции 4-7 <br />
-                        22:15 — Подача десерта <br />
-                        22:30 — Живой вокал | Композиции 8-9 <br />
-                        23:00 — Завершение вечера
-                    </p>
-                </div>
-                <h3 class="event__sub-title event__name">The Best Of Sade</h3>
-                <div class="event__description-wrapper">
-                    <p class="event__description">
-                        Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков,
-                        включая самые популярные хиты группы, раритеты и их любимые треки.
-                        <br>
-                        <br>
-                        Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
-                        <br>
-                        Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США
-                        и продав более 2 миллионов копий в Европе.
-                    </p>
-                </div>
-                <div class="event__content">
-                    <ol class="event__content-list">
-                        <li class="event__content-item">Your Love Is King</li>
-                        <li class="event__content-item">Hang On To Your Love</li>
-                        <li class="event__content-item">Smooth Operator</li>
-                        <li class="event__content-item">Jezebel</li>
-                        <li class="event__content-item">The Sweetest Taboo</li>
-                        <li class="event__content-item">Is It A Crime</li>
-                        <li class="event__content-item">Never As Good As The First Time</li>
-                        <li class="event__content-item">Love Is Stronger Than Pride</li>
-                        <li class="event__content-item">Paradise</li>
-                    </ol>
-                </div>
 
-                @@include('blocks/reserve.html', { "class": "event__reserve" })
+      @@include('blocks/breadcrumbs.html')
+
+      <article class="event">
+
+        <header class="event__header">
+          <h1 class="event__title title">Вечер | The Best of Sade</h1>
+
+          <div class="event__about">
+            <div class="event__info">
+              <time datetime="2024-12-16T20:00" class="event__time">
+                16/12/2024
+              </time>
+
+              <div class="event__info-text">
+                Кафе «Птичка»
+              </div>
             </div>
-        </article>
+
+            <picture class="event__picture">
+              <source media="{max-width: 1169px}" type="image/webp" srcset="assets/images/event/main_mobile.webp" />
+              <source media="{max-width: 1169px}" srcset="assets/images/event/main_mobile.jpg" />
+              <source type="image/webp" srcset="assets/images/event/main.webp" />
+              <img class="event__image" src="assets/images/events/sade.png" alt="Вечер | The Best of Sade"/>
+            </picture>
+
+            <div class="event__info">
+              <span class="event__time" data-caption="начало">20:00</span>
+
+              <div class="event__info-text">
+                Ленина 10 | 2 этаж
+              </div>
+            </div>
+
+          </div>
+        </header>
+
+        <div class="event__container">
+          <div class="event__content content">
+            <h3>Программа мероприятия</h3>
+            <div class="event__program-content">
+              <svg class="event__program-img">
+                  <use xlink:href="assets/icons/symbols.svg#bullets"></use>
+              </svg>
+              <p class="event__program-text">
+                20:15 — Приветствие гостей <br />
+                20:30 — Первая подача блюд | Салаты <br />
+                20:40 — Живой вокал | Композиции 1-3 <br />
+                21:20 — Подача горячих блюд <br />
+                21:30 — Живой вокал | Композиции 4-7 <br />
+                22:15 — Подача десерта <br />
+                22:30 — Живой вокал | Композиции 8-9 <br />
+                23:00 — Завершение вечера
+              </p>
+          </div>
+          <h3 class="event__sub-title event__name">The Best Of Sade</h3>
+          <div class="event__description-wrapper">
+            <p class="event__description">
+              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков,
+              включая самые популярные хиты группы, раритеты и их любимые треки.
+              <br>
+              <br>
+              Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+              <br>
+              Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США
+              и продав более 2 миллионов копий в Европе.
+            </p>
+          </div>
+          <div class="event__content">
+            <ol class="event__content-list">
+              <li class="event__content-item">Your Love Is King</li>
+              <li class="event__content-item">Hang On To Your Love</li>
+              <li class="event__content-item">Smooth Operator</li>
+              <li class="event__content-item">Jezebel</li>
+              <li class="event__content-item">The Sweetest Taboo</li>
+              <li class="event__content-item">Is It A Crime</li>
+              <li class="event__content-item">Never As Good As The First Time</li>
+              <li class="event__content-item">Love Is Stronger Than Pride</li>
+              <li class="event__content-item">Paradise</li>
+            </ol>
+          </div>
+
+          @@include('blocks/reserve.html', { "class": "event__reserve" })
+
+        </div>
+      </article>
     </main>
 
     @@include('blocks/page-footer.html')
-</body>
-
+  </body>
 </html>

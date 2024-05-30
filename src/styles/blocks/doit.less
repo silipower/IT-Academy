@@ -7,7 +7,7 @@
   {
     margin: auto;
     margin-left: -52px;
-    width: 2161px;
+    width: calc(100% + 241px);
     text-align: right;
     text-overflow: clip;
     font-family: @font3;
@@ -16,5 +16,21 @@
     font-weight: 700;
     line-height: 120%;
     color: @black;
+
+    @media @bw370
+    {
+      font-size: 32px;
+      width: calc(100% + 71px);
+    }
+
+    @media @bw768
+    {
+      font-size: 55px;
+    }
+
+    @media @bw1020
+    {
+      font-size: 70px;
+    }
   }
 }

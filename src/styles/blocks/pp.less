@@ -18,6 +18,12 @@
     backdrop-filter: blur(25px);
   }
 
+  @media @bw370
+  {
+    padding: 90px 20px 50px;
+    overflow-x: hidden;
+  }
+
   &__container
   {
     box-sizing: border-box;
@@ -28,10 +34,15 @@
     margin: auto;
     padding: 70px 40px 40px;
     background-color: rgba(222, 222, 222);
-    background-image: url("src/assets/images/noise.png");
+    background-image: url("../../assets/images/noise.png");
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto;
+
+    @media @bw370
+    {
+      padding: 70px 20px 40px;
+    }
   }
 
   &__title
@@ -47,11 +58,21 @@
     font-family: @font2;
     font-weight: 400;
     color: @white;
+
+    @media @bw370
+    {
+      margin: -95px 0 40px;
+      width: calc(100% - 30px);
+      font-size: 14px;
+      padding: 10px 20px;
+      line-height: 20px;
+    }
   }
 
   &__sticky-close
   {
     position: sticky;
+    align-self: flex-end;
     top: 0;
     width: 0;
   }
@@ -79,6 +100,14 @@
       {
         background-color: @red_dark;
       }
+    }
+
+    @media @bw370
+    {
+      right: -40px;
+      top: -90px;
+      width: 36px;
+      height: 36px;
     }
   }
 }
